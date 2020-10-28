@@ -10,13 +10,12 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
                               double sales, double rate, double basePayment){
         super(first, last, ssn, sales, rate); //creating the parent
         this.basePayment=basePayment;
-
     }
 
 //
     @Override
     public double earnings(){
-        return this.basePayment + this.getCommissionRate()*this.getGrossSales();
+        return this.basePayment + super.earnings();
     }
 //
     @Override // indicates this method overrides a superclass method
